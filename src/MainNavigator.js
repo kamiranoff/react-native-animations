@@ -1,6 +1,6 @@
-import {createStackNavigator} from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 import Main from './Main';
-import Opacity from './Animations/Opacity';
+import { Opacity, Translate, Scale } from './Animations';
 
 const MainNavigator = createStackNavigator({
   Main: {
@@ -8,6 +8,12 @@ const MainNavigator = createStackNavigator({
   },
   Opacity: {
     screen: Opacity,
+  },
+  Translate: {
+    screen: Translate,
+  },
+  Scale: {
+    screen: Scale,
   },
 }, {
   initialRouteName: 'Main',

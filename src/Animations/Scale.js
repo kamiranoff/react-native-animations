@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   }
 });
 
-class Opacity extends Component {
+class Scale extends Component {
 
   state = {
     animation: new Animated.Value(1),
@@ -22,7 +22,7 @@ class Opacity extends Component {
 
   renderAnimation = () => {
     Animated.timing(this.state.animation, {
-      toValue: 0,
+      toValue: 2,
       duration: 350,
     }).start(() => {
       Animated.timing(this.state.animation, {
@@ -34,16 +34,22 @@ class Opacity extends Component {
 
   componentDidMount() {
     this.renderAnimation();
+
   }
 
   startAnimation = () => {
     this.renderAnimation();
   };
 
+
   render() {
 
     const animatedStyles = {
-      opacity: this.state.animation,
+      transform: [
+        {
+          scale: this.state.animation,
+        },
+      ],
     };
 
     return (
@@ -56,4 +62,4 @@ class Opacity extends Component {
   }
 }
 
-export default Opacity;
+export default Scale;

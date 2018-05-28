@@ -14,19 +14,19 @@ const styles = StyleSheet.create({
   }
 });
 
-class Opacity extends Component {
+class Translate extends Component {
 
   state = {
-    animation: new Animated.Value(1),
+    animation: new Animated.Value(0),
   };
 
   renderAnimation = () => {
     Animated.timing(this.state.animation, {
-      toValue: 0,
+      toValue: 200,
       duration: 350,
     }).start(() => {
       Animated.timing(this.state.animation, {
-        toValue: 1,
+        toValue: 0,
         duration: 500,
       }).start();
     });
@@ -34,16 +34,22 @@ class Opacity extends Component {
 
   componentDidMount() {
     this.renderAnimation();
+
   }
 
   startAnimation = () => {
     this.renderAnimation();
   };
 
+
   render() {
 
     const animatedStyles = {
-      opacity: this.state.animation,
+      transform: [
+        {
+          translateY: this.state.animation,
+        },
+      ],
     };
 
     return (
@@ -56,4 +62,4 @@ class Opacity extends Component {
   }
 }
 
-export default Opacity;
+export default Translate;

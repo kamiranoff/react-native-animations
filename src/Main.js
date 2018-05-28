@@ -14,14 +14,16 @@ const list = [
 
   },
   {
-    title: 'Chris Jackson',
-    link: 'Opacity',
+    title: 'Translate',
+    link: 'Translate',
+  },
+  {
+    title: 'Scale',
+    link: 'Scale',
   },
 ];
 
 export default class Main extends React.Component {
-
-
 
   renderItem = ({ item }) => (
     <ListItem
