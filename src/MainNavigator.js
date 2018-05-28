@@ -1,6 +1,6 @@
 import { createStackNavigator } from 'react-navigation';
 import Main from './Main';
-import { Opacity, Translate, Scale } from './Animations';
+import { Opacity, Translate, Scale, WidthAndHeight } from './Animations';
 
 const MainNavigator = createStackNavigator({
   Main: {
@@ -15,6 +15,9 @@ const MainNavigator = createStackNavigator({
   Scale: {
     screen: Scale,
   },
+  WidthAndHeight: {
+    screen: WidthAndHeight,
+  }
 }, {
   initialRouteName: 'Main',
 });

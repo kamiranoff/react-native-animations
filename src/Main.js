@@ -21,6 +21,11 @@ const list = [
     title: 'Scale',
     link: 'Scale',
   },
+  {
+    title: 'WidthAndHeight',
+    link: 'WidthAndHeight',
+  },
+
 ];
 
 export default class Main extends React.Component {
@@ -32,7 +37,7 @@ export default class Main extends React.Component {
       chevron
       bottomDivier
       containerStyle={{ borderBottomColor: "#eee", borderBottomWidth: 1 }}
-      wrapperStyle={{ borderBottomWidth: 0, paddingVertical: 10}}
+      wrapperStyle={{ borderBottomWidth: 0, paddingVertical: 10 }}
       onPress={() => this.props.navigation.navigate(item.link)}
     />
   );
